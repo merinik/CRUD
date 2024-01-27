@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+ <!-- <link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+<body>
+	<ul>
+		<% info.forEach(function(one) { %>
+		<li>
+		Id - <strong><%= one.theaterId %></strong> <br>
+		City - <strong><%= one.location.address.city %></strong> /
+		State - <strong><%= one.location.address.state %></strong> /
+		Zip code - <strong><%= one.location.address.zipcode %></strong> /
+		Street - <strong><%= one.location.address.street1 %></strong> <br> <br>
+		</li>
+		<% }); %>
+		</ul>
+  <p id="myText" class="">Hello Tumo</p>
+  <div class="container">
+    <!--<form action="/addInfo" method="post">-->
+      <h2>Login</h2>
+      <input  id="usName" type="text" placeholder="Username" name="login"><br></br>
+      <input  id="usPass" type="password" placeholder="Password" name="pass"><br></br>
+	  <input  id="usEmail" type="email" placeholder="Email" name="email"><br></br>
+      <button type="submit" onclick="getVal()" >Login</button>
+    <!--</form>-->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

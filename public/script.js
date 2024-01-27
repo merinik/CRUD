@@ -3,14 +3,15 @@
 //console.log(text);
 
 let usName = document.getElementById('usName');
-let usAge = document.getElementById('usAge');
+let usPass = document.getElementById('usPass');
+let usEmail = document.getElementById('usEmail');
 
 function getVal () {
-        fetch("http://localhost:3000/addInfo", {
+        fetch("/addInfo", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({login:usName.value, pass:usAge.value})
+        body: JSON.stringify({login:usName.value, pass:usPass.value, email:usEmail.value})
         })
 }
