@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update Page</title>
+
+	<style>
+
+		.container {
+			width: 300px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],
+		input[type="number"],
+		input[type="hidden"] {
+			width: 90%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		input[type="submit"] {
+			top: 10px;
+			width: 100%;
+			padding: 10px;
+			background-color: #4c8baf;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+	</table>
+	<form action="/updateData" method="post">
+		<input id="PrName" type="text" required name="name" placeholder="Name" value="<%= obj.name %>"><br><br>
+		<input id="PrPrice" type="number" name="price" placeholder="Price" value="<%= obj.price %>"><br><br>
+		<input id="PrImage" type="text" name="image" placeholder="Image" value="<%= obj.image %>"><br><br>
+		<input id="PrUUID" type="number" name="uuid" placeholder="UUID" value="<%= obj.uuid %>"><br><br>
+		<input id="PrDes" type="text" name="description" placeholder="Description" value="<%= obj.description %>"><br><br>
+		<input type="hidden" name="id" value="<%= obj._id %>"><br><br>
+		<input type="submit">
+	</form>
+	</div>
+</body>
+
+</html>

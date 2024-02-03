@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User's list</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th,
+		td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+
+		.button {
+			top: 10px;
+			width: 100%;
+			padding: 10px;
+			background-color: #4c8baf;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.update {
+			background-color: green;
+			margin: 10px;
+			padding: 5px;
+			width: 100px;
+			color: white;
+		}
+
+		.delete {
+			background-color: red;
+			margin: 10px;
+			width: 100px;
+			padding: 5px;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>Price</td>
+			<td>Update</td>
+			<td>Delete</td>
+		</tr>
+		<% info.forEach(function(justOne) { %>
+			<tr>
+				<td>
+					<%= justOne.name %>
+				</td>
+				<td>
+					<%= justOne.price %>
+				</td>
+				<td><a class="update" href="update/<%= justOne._id %>">Update</a></td>
+				<td><a class="delete" href="delete/<%= justOne._id %>">Delete</a></td>
+			</tr>
+			<% }); %>
+	</table>
+	<button class="button"><a href="/">Back</a></button>
+</body>
+</html>

@@ -2,30 +2,25 @@
 <html>
 <head>
   <title>Login Form</title>
- <!-- <link rel="stylesheet" type="text/css" href="style.css">-->
+ <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<ul>
-		<% info.forEach(function(one) { %>
-		<li>
-		Id - <strong><%= one.theaterId %></strong> <br>
-		City - <strong><%= one.location.address.city %></strong> /
-		State - <strong><%= one.location.address.state %></strong> /
-		Zip code - <strong><%= one.location.address.zipcode %></strong> /
-		Street - <strong><%= one.location.address.street1 %></strong> <br> <br>
-		</li>
-		<% }); %>
-		</ul>
-  <p id="myText" class="">Hello Tumo</p>
-  <div class="container">
-    <!--<form action="/addInfo" method="post">-->
-      <h2>Login</h2>
-      <input  id="usName" type="text" placeholder="Username" name="login"><br></br>
-      <input  id="usPass" type="password" placeholder="Password" name="pass"><br></br>
-	  <input  id="usEmail" type="email" placeholder="Email" name="email"><br></br>
-      <button type="submit" onclick="getVal()" >Login</button>
-    <!--</form>-->
-  </div>
+
+	<div class="container">
+    <form action="/addInfo" method="post">
+        <input id="PrName" type="text" required name="name" placeholder="Name"><br><br>
+        <input id="PrPrice" type="number" name="price" placeholder="Price"><br><br>
+        <input id="PrImage" type="text" name="image" placeholder="Image"><br><br>
+        <input id="PrUUID" type="number" name="uuid" placeholder="UUID"><br><br>
+        <input id="PrDes" type="text" name="description" placeholder="Description"><br><br>
+        <input id="id" type="hidden" name="id" >
+        <input type="submit" ><br><br>
+
+     </form>
+
+	 <button><a href="/list">User's list</a></button>
+	 
+	</div>
   <script src="script.js"></script>
 </body>
 </html>
