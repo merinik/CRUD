@@ -1,26 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login Form</title>
- <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-	<div class="container">
-    <form action="/addInfo" method="post">
-        <input id="PrName" type="text" required name="name" placeholder="Name"><br><br>
-        <input id="PrPrice" type="number" name="price" placeholder="Price"><br><br>
-        <input id="PrImage" type="text" name="image" placeholder="Image"><br><br>
-        <input id="PrUUID" type="number" name="uuid" placeholder="UUID"><br><br>
-        <input id="PrDes" type="text" name="description" placeholder="Description"><br><br>
-        <input id="id" type="hidden" name="id" >
-        <input type="submit" ><br><br>
-
-     </form>
-
-	 <button><a href="/list">User's list</a></button>
-	 
-	</div>
-  <script src="script.js"></script>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="/addInfo" method="post">
+                    <div class="login__field">
+                    
+                        <input id="PrName" type="text" required name="name" class="login__input" placeholder="Name">
+                    </div>
+                    <div class="login__field">
+                    
+                        <input id="PrPrice" type="number" name="price" class="login__input" placeholder="Price">
+                    </div>
+                    <div class="login__field">
+                    
+                        <input id="PrImage" type="text" name="image" class="login__input" placeholder="image">
+                    </div>
+                    <div class="login__field">
+                    
+                        <input  id="PrUUID" type="number" name="uuid" class="login__input" placeholder="UUID">
+                    </div>
+                    <div class="login__field">
+                        <input id="PrDes" type="text" name="description"  class="login__input" placeholder="Description">
+                    </div>
+                    <div class="login__field">
+                        <input id="id" type="hidden" name="id" >
+                    </div>
+                    <div class="login__field">
+                        <input type="submit" class="button login__submit">
+                    </div>
+                    <button class="button login__submit"><a href="/list">
+                        User's list
+                        </a>
+                    </button>				
+                </form>
+                
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
